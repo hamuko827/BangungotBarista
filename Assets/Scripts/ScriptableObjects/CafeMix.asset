@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 622677581a4d85c46a514d53f93946f5, type: 3}
+  m_Name: CafeMix
+  m_EditorClassIdentifier: Assembly-CSharp::DrinkRecipe
+  displayName: CafeMix
+  coffee: 1
+  milk: 1
+  cream: 1
+  hotPrefab: {fileID: 5472746233416750867, guid: 41ecb01a7272bb84695f0bf5c7b7ebd6, type: 3}
+  icedPrefab: {fileID: 2856704528305994672, guid: 9f4e498e9262ec849a2ba185e061a0ae, type: 3}

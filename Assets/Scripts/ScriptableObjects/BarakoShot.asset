@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 622677581a4d85c46a514d53f93946f5, type: 3}
+  m_Name: BarakoShot
+  m_EditorClassIdentifier: Assembly-CSharp::DrinkRecipe
+  displayName: BarakoShot
+  coffee: 3
+  milk: 0
+  cream: 0
+  hotPrefab: {fileID: 9118042084707491557, guid: ac4a4a721523c35429fe2fc60fda564b, type: 3}
+  icedPrefab: {fileID: 4784226564568412356, guid: 2153428d8dc7b364d940387eddbe6f12, type: 3}
