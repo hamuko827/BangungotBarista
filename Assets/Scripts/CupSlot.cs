@@ -1,7 +1,7 @@
 using UnityEngine;
 
-// Needs a Collider2D (trigger is fine). Make 1 Tray slot, 3 Machine slots
-// (one per ingredient) and 1 Output slot.
+// Needs a Collider2D (trigger is fine). Make 4 Tray slots and 3 Machine slots
+// (one per ingredient, with 'machine' assigned).
 public class CupSlot : MonoBehaviour
 {
     public SlotKind kind;
@@ -20,10 +20,9 @@ public class CupSlot : MonoBehaviour
         if (Occupant != null) return false;
         switch (kind)
         {
-            case SlotKind.Tray:    return d is Cup;
-            case SlotKind.Machine: return d is Cup && machine.IsEmpty; // one cup in the machine at a time
-            case SlotKind.Output:  return d is Drink;
+            case SlotKind.Tray:    return true;                           // cups and finished drinks
+            case SlotKind.Machine: return d is Cup && machine.IsEmpty;    // cups only, one at a time
         }
-        return false;
+        return false; // SlotKind.Output is no longer used
     }
 }

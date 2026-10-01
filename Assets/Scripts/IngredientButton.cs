@@ -7,5 +7,10 @@ public class IngredientButton : MonoBehaviour
     public CoffeeMachine machine;
 
     void OnMouseDown() => Press();
-    public void Press() => machine.TryAddIngredient(ingredient);
+
+    public void Press()
+    {
+        bool counted = machine.TryAddIngredient(ingredient);
+        SfxBank.Play(counted ? SfxId.IngredientClick : SfxId.IngredientRejected);
+    }
 }

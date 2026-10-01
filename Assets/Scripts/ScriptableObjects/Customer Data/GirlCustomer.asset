@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: decd18123a1cf8f4aadb7a4c48d8247d, type: 3}
+  m_Name: GirlCustomer
+  m_EditorClassIdentifier: Assembly-CSharp::CustomerData
+  customerName: Girl
+  minPatience: 28
+  maxPatience: 30
+  awakeSprite: {fileID: 499510104018381892, guid: b746698b4152653469fff25b3d89b4c4, type: 3}
+  awakeBubbleSprite: {fileID: -2159050436134110518, guid: 8fdd47c4a2a383344b55f45e8d073a23, type: 3}
+  slightlySleepySprite: {fileID: -2805508123681510319, guid: b746698b4152653469fff25b3d89b4c4, type: 3}
+  slightlySleepyBubbleSprite: {fileID: 6187172030602823768, guid: 8fdd47c4a2a383344b55f45e8d073a23, type: 3}
+  reallySleepySprite: {fileID: 4435267233188265278, guid: b746698b4152653469fff25b3d89b4c4, type: 3}
+  reallySleepyBubbleSprite: {fileID: -8349579543044211994, guid: 8fdd47c4a2a383344b55f45e8d073a23, type: 3}

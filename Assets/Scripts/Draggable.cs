@@ -1,7 +1,7 @@
 using UnityEngine;
 
 // Shared drag logic for Cup and Drink. Needs a Collider2D on the prefab.
-// Uses OnMouse* callbacks (legacy Input). Camera must be tagged MainCamera.
+// Uses OnMouse* callbacks. Camera must be tagged MainCamera.
 [RequireComponent(typeof(Collider2D))]
 public abstract class Draggable : MonoBehaviour
 {
@@ -32,6 +32,7 @@ public abstract class Draggable : MonoBehaviour
         dragging = true;
         grabOffset = transform.position - MouseWorld();
         if (home != null) home.Vacate(this); // slot is free while held; home is remembered for snap-back
+        SfxBank.Play(SfxId.CupPickUp);
     }
 
     void OnMouseDrag()
@@ -57,12 +58,14 @@ public abstract class Draggable : MonoBehaviour
     {
         if (hit.TryGetComponent(out TrashCan _))
         {
+            SfxBank.Play(SfxId.Trashed);
             Destroy(gameObject);
             return true;
         }
         if (hit.TryGetComponent(out CupSlot slot) && slot.CanAccept(this))
         {
             PlaceIn(slot);
+            SfxBank.Play(SfxId.CupPlaced);
             return true;
         }
         return false;
